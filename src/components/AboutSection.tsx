@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, Heart, Award } from "lucide-react";
+import clinicaImg from "@/assets/clinica.jpg";
 
 const features = [
   { icon: Shield, title: "Segurança", desc: "Protocolos rigorosos e equipamentos de última geração" },
