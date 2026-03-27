@@ -1,4 +1,4 @@
-import { Heart, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Heart, Instagram, Facebook, ExternalLink } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
 const Footer = () => {
@@ -49,14 +49,14 @@ const Footer = () => {
               <li>Dom e Feriados: Fechado</li>
             </ul>
             <div className="flex gap-3 mt-4">
-              <a href="#" className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/40 transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/integralcabofrio/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/40 transition-colors" aria-label="Instagram">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/40 transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=100071536586636" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/40 transition-colors" aria-label="Facebook">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/40 transition-colors" aria-label="LinkedIn">
-                <Linkedin className="w-4 h-4" />
+              <a href="https://linktr.ee/integralcabofrio" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/40 transition-colors" aria-label="Linktree">
+                <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
