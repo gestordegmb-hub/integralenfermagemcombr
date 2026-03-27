@@ -6,7 +6,7 @@ const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Especialidades", href: "#especialidades" },
-  { label: "Corpo Clínico", href: "#corpo-clinico" },
+  { label: "Convênios", href: "#convenios" },
   { label: "Convênios", href: "#convenios" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Blog", href: "#blog" },
