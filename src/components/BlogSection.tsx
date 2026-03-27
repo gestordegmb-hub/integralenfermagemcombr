@@ -3,25 +3,25 @@ import { ArrowRight, Clock } from "lucide-react";
 
 const posts = [
   {
-    title: "5 sinais de que você precisa de cuidados de enfermagem domiciliar",
-    excerpt: "Conheça os principais indicadores de que é hora de buscar suporte profissional de enfermagem em casa para você ou seu familiar.",
-    date: "15 Mar 2026",
+    title: "Tratamento de feridas: como a tecnologia acelera a cicatrização",
+    excerpt: "Entenda como curativos avançados, laserterapia e ozonioterapia podem reduzir o tempo de cicatrização e prevenir complicações.",
+    date: "20 Mar 2026",
     readTime: "5 min",
-    category: "Home Care",
+    category: "Tratamento de Feridas",
   },
   {
-    title: "Curativos avançados: quando a tecnologia acelera a cicatrização",
-    excerpt: "Entenda como os curativos de última geração podem reduzir o tempo de cicatrização e prevenir complicações em feridas complexas.",
-    date: "10 Mar 2026",
+    title: "Pé diabético: prevenção e cuidados essenciais no dia a dia",
+    excerpt: "Saiba como prevenir lesões, identificar sinais de alerta e quando buscar atendimento especializado para o pé diabético.",
+    date: "15 Mar 2026",
     readTime: "4 min",
-    category: "Curativos",
+    category: "Pé Diabético",
   },
   {
-    title: "Cuidados paliativos: dignidade e conforto em cada momento",
-    excerpt: "Saiba como o atendimento de enfermagem em cuidados paliativos pode transformar a qualidade de vida do paciente e da família.",
-    date: "05 Mar 2026",
+    title: "LEDterapia e PRF: terapias inovadoras na cicatrização de feridas",
+    excerpt: "Conheça como a fototerapia com LED e a fibrina rica em plaquetas estão revolucionando o tratamento de feridas crônicas.",
+    date: "10 Mar 2026",
     readTime: "6 min",
-    category: "Cuidados Paliativos",
+    category: "Terapias Avançadas",
   },
 ];
 

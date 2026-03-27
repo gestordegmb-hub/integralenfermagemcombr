@@ -73,9 +73,9 @@ const HeroSection = () => {
             className="mt-10 flex gap-8"
           >
             {[
-              { num: "+5.000", label: "Pacientes Atendidos" },
-              { num: "12+", label: "Especialidades" },
-              { num: "98%", label: "Satisfação" },
+              { num: "⭐ 5", label: "Estrelas no Google" },
+              { num: "+15", label: "Anos de Experiência" },
+              { num: "✦", label: "Referência na Região dos Lagos" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-2xl md:text-3xl font-bold text-primary">{stat.num}</p>

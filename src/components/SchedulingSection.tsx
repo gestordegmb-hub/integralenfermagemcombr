@@ -129,6 +129,16 @@ const SchedulingSection = () => {
                   </div>
                 </div>
                 <div>
+                  <label className="block text-sm font-medium text-foreground mb-1">Endereço</label>
+                  <input
+                    type="text"
+                    value={form.address}
+                    onChange={(e) => setForm({ ...form, address: e.target.value })}
+                    className="w-full px-4 py-2.5 rounded-lg border border-input bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="Rua, número, bairro - cidade"
+                  />
+                </div>
+                <div>
                   <label className="block text-sm font-medium text-foreground mb-1">Especialidade *</label>
                   <select
                     required

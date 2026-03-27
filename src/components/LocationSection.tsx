@@ -85,7 +85,7 @@ const LocationSection = () => {
           >
             <iframe
               title="Localização Integral Clínica"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1976560742654!2d-46.65342868502226!3d-23.561684284682784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c0c6c7!2sAv.%20Paulista%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1629900000000!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.893709983055!2d-42.0367919!3d-22.880384499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9705fd2acef5b3%3A0x3ae8ba75e5ab493!2sCl%C3%ADnica%20de%20Enfermagem%20Integral%20Cabo%20Frio!5e0!3m2!1spt-BR!2sbr!4v1774570851613!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: 320 }}

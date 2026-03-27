@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { Shield, Heart, Award, Users } from "lucide-react";
+import { Shield, Heart, Award } from "lucide-react";
 
 const features = [
   { icon: Shield, title: "Segurança", desc: "Protocolos rigorosos e equipamentos de última geração" },
   { icon: Heart, title: "Humanização", desc: "Atendimento acolhedor centrado no paciente" },
   { icon: Award, title: "Qualidade", desc: "Profissionais com certificações e especializações" },
-  { icon: Users, title: "Equipe", desc: "Corpo clínico multidisciplinar e experiente" },
 ];
 
 const AboutSection = () => {
@@ -20,20 +19,22 @@ const AboutSection = () => {
           >
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Sobre a Clínica</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6 text-foreground">
-              Mais de 10 anos cuidando da sua saúde com excelência
+              Referência em enfermagem especializada em Cabo Frio
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              A Integral Clínica de Enfermagem Especializada nasceu com o propósito de
-              oferecer cuidados de saúde de alto padrão, unindo tecnologia avançada a um
-              atendimento verdadeiramente humanizado. Nossa equipe é formada por enfermeiros
-              especialistas, comprometidos com a segurança e o bem-estar de cada paciente.
+              A Integral Clínica de Enfermagem Especializada nasceu da experiência prática e do compromisso com um
+              cuidado mais humano. Localizada em Cabo Frio, é referência na Região dos Lagos unindo tecnologia e atendimento
+              individualizado.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              À frente está a Dra. Viviane Paz Torres, Enfermeira Estomaterapeuta com mais de 15 anos de experiência.
+              Também atua como Responsável Técnica do Serviço de Atenção à Pessoa com Estomia há mais de 12 anos.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Acreditamos que cada pessoa merece ser tratada com dignidade, respeito e atenção
-              individualizada. Por isso, investimos continuamente na capacitação dos nossos
-              profissionais e na modernização da nossa estrutura.
+              Busca constante por atualização e soluções que fazem diferença na recuperação.
+              Referência em tratamento com segurança, ciência, tecnologia e confiança.
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               {features.map((f) => (
                 <div key={f.title} className="flex items-start gap-3 p-3 rounded-lg bg-accent/50">
                   <f.icon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
