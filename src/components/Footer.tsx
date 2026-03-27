@@ -1,4 +1,5 @@
 import { Heart, Instagram, Facebook, Linkedin } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -7,9 +8,7 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">I</span>
-              </div>
+              <img src={logoImg} alt="Integral Clínica" className="w-9 h-9 rounded-full object-cover" />
               <div>
                 <span className="font-bold block leading-tight">Integral</span>
                 <span className="text-xs opacity-70 block leading-tight">Clínica de Enfermagem</span>

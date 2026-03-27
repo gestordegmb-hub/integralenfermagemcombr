@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -21,9 +22,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">I</span>
-          </div>
+          <img src={logoImg} alt="Integral Clínica" className="w-10 h-10 rounded-full object-cover" />
           <div>
             <span style={{ fontFamily: "'Orbitron', sans-serif" }} className="font-bold text-lg text-foreground leading-tight block">Integral</span>
             <span className="text-xs text-muted-foreground leading-tight block">Clínica de Enfermagem</span>
