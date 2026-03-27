@@ -1,30 +1,34 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import depoimento1 from "@/assets/depoimentos_1.png";
+import depoimento2 from "@/assets/depoimentos_2.png";
+import depoimento3 from "@/assets/depoimentos_3.png";
+import depoimento4 from "@/assets/depoimentos_4.png";
 
 const testimonials = [
   {
-    name: "Maria Aparecida S.",
-    text: "Atendimento impecável! A equipe da Integral me tratou com tanto carinho que me senti em casa. Os curativos avançados resolveram meu problema que há meses não tinha solução.",
+    name: "Vinicius Alves Araújo",
+    text: "Simplesmente perfeito o trabalho de vocês... Meu filho chegou aí com uma lesão profunda e extensa após um acidente e vocês fizeram todos os cuidados e hoje está super bem..",
     rating: 5,
-    service: "Curativos Especiais",
+    image: depoimento1,
   },
   {
-    name: "João Carlos M.",
-    text: "O serviço de Home Care da Integral salvou nosso dia a dia. Meu pai recebe cuidados de excelência sem precisar sair de casa. Profissionais extremamente capacitados e atenciosos.",
+    name: "Monique Fernandes Torres",
+    text: "Profissionais super habilitadas, atenciosas e atualizadas. Consultório limpo, organizado. Ambiente de acolhimento. O melhor consultório de enfermagem da Região dos Lagos.",
     rating: 5,
-    service: "Home Care",
+    image: depoimento2,
   },
   {
-    name: "Patrícia Oliveira",
-    text: "Minha filha tem medo de agulha e a enfermeira Juliana foi simplesmente incrível! Conseguiu aplicar a vacina sem nenhum drama. Recomendo a todos os pais!",
+    name: "Janaína Martins Rocha",
+    text: "Atendimento de excelência e olhar atento as necessidades de cada paciente!! Faz uso de recursos como ozônio e laser que aceleram o tratamento. Fazendo com que todo processo se torne menos doloroso!",
     rating: 5,
-    service: "Enfermagem Pediátrica",
+    image: depoimento3,
   },
   {
-    name: "Roberto Almeida",
-    text: "Após minha cirurgia cardíaca, o acompanhamento da equipe de enfermagem cardiológica foi essencial para minha recuperação. Monitoramento constante e muito profissionalismo.",
+    name: "Fabio Dalanhese",
+    text: "Fomos muito bem acolhidos, o tratamento prescrito para minha tia com alta tecnologia. Estou amando! Recomendo!",
     rating: 5,
-    service: "Enfermagem Cardiológica",
+    image: depoimento4,
   },
 ];
 
@@ -55,17 +59,21 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-background rounded-xl p-6 shadow-sm"
+              className="bg-background rounded-xl overflow-hidden shadow-sm flex flex-col"
             >
-              <div className="flex gap-1 mb-3">
-                {Array.from({ length: t.rating }).map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-primary text-primary" />
-                ))}
-              </div>
-              <p className="text-sm text-muted-foreground mb-4 italic">"{t.text}"</p>
-              <div className="border-t border-border pt-3">
+              <img
+                src={t.image}
+                alt={`Depoimento de ${t.name}`}
+                className="w-full object-cover"
+                loading="lazy"
+              />
+              <div className="p-4">
+                <div className="flex gap-1 mb-2">
+                  {Array.from({ length: t.rating }).map((_, j) => (
+                    <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+                  ))}
+                </div>
                 <p className="font-semibold text-sm text-foreground">{t.name}</p>
-                <p className="text-xs text-primary">{t.service}</p>
               </div>
             </motion.div>
           ))}
