@@ -12,19 +12,59 @@ const AboutSection = () => {
   return (
     <section id="sobre" className="py-20 bg-card">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-[auto_1fr] gap-10 items-start">
+        {/* Mobile: imagem acima */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="lg:hidden mb-8"
+        >
+          <img src={clinicaImg} alt="Fachada da Integral Clínica de Enfermagem" className="rounded-2xl shadow-lg w-full max-w-md mx-auto object-cover" />
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-14 items-stretch">
+          {/* Coluna esquerda: imagem desktop + missão/visão/valores */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className=""
+            className="flex flex-col gap-8"
           >
-            <img src={clinicaImg} alt="Fachada da Integral Clínica de Enfermagem" className="rounded-2xl shadow-lg w-80 object-cover" />
+            <div className="hidden lg:block">
+              <img src={clinicaImg} alt="Fachada da Integral Clínica de Enfermagem" className="rounded-2xl shadow-lg w-full h-72 object-cover" />
+            </div>
+
+            <div className="bg-primary/10 rounded-2xl p-6 space-y-4 flex-1">
+              <div className="bg-card rounded-xl p-5 shadow-md">
+                <h3 className="font-bold text-lg text-foreground mb-1">Nossa Missão</h3>
+                <p className="text-muted-foreground text-sm">
+                  Proporcionar cuidados de enfermagem especializados com excelência, segurança e
+                  humanização, contribuindo para a saúde e qualidade de vida dos nossos pacientes.
+                </p>
+              </div>
+              <div className="bg-card rounded-xl p-5 shadow-md">
+                <h3 className="font-bold text-lg text-foreground mb-1">Nossa Visão</h3>
+                <p className="text-muted-foreground text-sm">
+                  Ser referência regional em enfermagem especializada, reconhecida pela
+                  qualidade do atendimento e pela inovação nos cuidados de saúde.
+                </p>
+              </div>
+              <div className="bg-card rounded-xl p-5 shadow-md">
+                <h3 className="font-bold text-lg text-foreground mb-1">Nossos Valores</h3>
+                <p className="text-muted-foreground text-sm">
+                  Ética, transparência, respeito ao paciente, compromisso com a qualidade e
+                  busca constante por atualização científica.
+                </p>
+              </div>
+            </div>
           </motion.div>
+
+          {/* Coluna direita: texto + features */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="flex flex-col justify-center"
           >
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Sobre a Clínica</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6 text-foreground">
@@ -43,7 +83,7 @@ const AboutSection = () => {
               Busca constante por atualização e soluções que fazem diferença na recuperação.
               Referência em tratamento com segurança, ciência, tecnologia e confiança.
             </p>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-3 gap-4">
               {features.map((f) => (
                 <div key={f.title} className="flex items-start gap-3 p-3 rounded-lg bg-accent/50">
                   <f.icon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -53,37 +93,6 @@ const AboutSection = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="bg-primary/10 rounded-2xl p-8 space-y-6">
-              <div className="bg-card rounded-xl p-6 shadow-md">
-                <h3 className="font-bold text-lg text-foreground mb-2">Nossa Missão</h3>
-                <p className="text-muted-foreground text-sm">
-                  Proporcionar cuidados de enfermagem especializados com excelência, segurança e
-                  humanização, contribuindo para a saúde e qualidade de vida dos nossos pacientes.
-                </p>
-              </div>
-              <div className="bg-card rounded-xl p-6 shadow-md">
-                <h3 className="font-bold text-lg text-foreground mb-2">Nossa Visão</h3>
-                <p className="text-muted-foreground text-sm">
-                  Ser referência regional em enfermagem especializada, reconhecida pela
-                  qualidade do atendimento e pela inovação nos cuidados de saúde.
-                </p>
-              </div>
-              <div className="bg-card rounded-xl p-6 shadow-md">
-                <h3 className="font-bold text-lg text-foreground mb-2">Nossos Valores</h3>
-                <p className="text-muted-foreground text-sm">
-                  Ética, transparência, respeito ao paciente, compromisso com a qualidade e
-                  busca constante por atualização científica.
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>
