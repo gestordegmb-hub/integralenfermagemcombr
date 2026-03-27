@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Home, Info, Stethoscope, Shield, MessageSquare, BookOpen, HelpCircle, MapPin, Calendar } from "lucide-react";
+import { Menu, X, Phone, Home, Info, Stethoscope, MessageSquare, BookOpen, HelpCircle, MapPin, Calendar } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
 const navLinks = [
