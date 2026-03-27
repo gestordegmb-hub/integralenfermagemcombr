@@ -61,18 +61,6 @@ const LocationSection = () => {
                 <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors block">(22) 97401-7588</a>
               </div>
             </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Mail className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground">E-mail</h3>
-                <p className="text-sm text-muted-foreground">
-                  contato@integralenfermagem.com.br
-                </p>
-              </div>
-            </div>
           </motion.div>
 
           <motion.div
