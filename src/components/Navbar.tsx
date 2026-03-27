@@ -31,10 +31,6 @@ const Navbar = () => {
           </a>
 
           <div className="flex items-center gap-3">
-            <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center gap-1 text-sm text-muted-foreground hover:text-primary">
-              <Phone className="w-4 h-4" />
-              (22) 97401-7588
-            </a>
             <a href="#agendamento">
               <Button variant="hero" size="sm">Agendar Consulta</Button>
             </a>
