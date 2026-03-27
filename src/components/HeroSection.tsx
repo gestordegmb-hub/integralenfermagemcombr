@@ -5,10 +5,10 @@ import heroImg from "@/assets/hero-clinic.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-20">
+    <section id="inicio" className="relative flex items-center pt-20">
       <div className="absolute inset-0 z-0 bg-foreground">
-        <img src={heroImg} alt="Clínica Integral - Ambiente moderno e acolhedor" className="w-full h-full object-contain object-center" loading="eager" />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/70 to-foreground/40" />
+        <img src={heroImg} alt="Clínica Integral - Ambiente moderno e acolhedor" className="w-full h-full object-cover object-center" loading="eager" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/40" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
