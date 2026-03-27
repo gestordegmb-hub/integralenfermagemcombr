@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Qual o horário de funcionamento da clínica?",
-    a: "Funcionamos de segunda a sexta-feira, das 7h às 19h, e aos sábados das 8h às 13h. Para urgências, entre em contato pelo WhatsApp que nossa equipe de plantão poderá orientá-lo.",
+    a: "Funcionamos de segunda a sexta-feira, das 09:00 às 18:00, e aos sábados das 09:00 às 13:00. Domingos e feriados estamos fechados. Para urgências, entre em contato pelo WhatsApp que nossa equipe poderá orientá-lo.",
   },
   {
     q: "Preciso de encaminhamento médico para agendar?",
