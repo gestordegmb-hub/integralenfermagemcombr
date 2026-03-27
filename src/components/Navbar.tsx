@@ -25,7 +25,7 @@ const Navbar = () => {
             <span className="text-primary-foreground font-bold text-lg">I</span>
           </div>
           <div>
-            <span className="font-heading font-bold text-lg text-foreground leading-tight block">Integral</span>
+            <span style={{ fontFamily: "'Orbitron', sans-serif" }} className="font-bold text-lg text-foreground leading-tight block">Integral</span>
             <span className="text-xs text-muted-foreground leading-tight block">Clínica de Enfermagem</span>
           </div>
         </a>
