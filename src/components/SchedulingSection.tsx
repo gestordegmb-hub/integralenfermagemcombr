@@ -23,6 +23,7 @@ const SchedulingSection = () => {
     name: "",
     phone: "",
     email: "",
+    address: "",
     specialty: "",
     message: "",
   });
