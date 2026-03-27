@@ -67,7 +67,7 @@ const SchedulingSection = () => {
             </div>
 
             <a
-              href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta na Integral Clínica."
+              href="https://wa.me/5522974017588?text=Olá! Gostaria de agendar uma consulta na Integral Clínica."
               target="_blank"
               rel="noopener noreferrer"
             >
