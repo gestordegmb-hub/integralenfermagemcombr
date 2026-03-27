@@ -1,28 +1,16 @@
 
 
-## Plano: Gerar HTML estático completo do site
+## Plano: Separar HTML e CSS em dois arquivos
 
 ### O que será feito
-Gerar um arquivo `.html` único e autossuficiente com todo o conteúdo do site da Integral Clínica, incluindo CSS inline, sem dependência de React ou frameworks JavaScript.
+Dividir o arquivo `integral-clinica.html` em dois arquivos independentes:
+1. **`integral-clinica.html`** — apenas o HTML, com um `<link>` para o CSS externo
+2. **`integral-clinica.css`** — todo o CSS que está dentro da tag `<style>` (linhas 10-196)
 
 ### Como
-1. Criar um script que gera um arquivo HTML completo em `/mnt/documents/integral-clinica.html` contendo:
-   - Todo o conteúdo textual das 9 seções (Hero, Sobre, Especialidades, Convênios, Depoimentos, Blog, Agendamento, FAQ, Localização)
-   - Navbar fixa com menu lateral
-   - Footer completo
-   - Botão flutuante do WhatsApp
-   - CSS embutido reproduzindo o visual do Tailwind (cores, fontes, grid, responsividade)
-   - Google Fonts (Montserrat e Orbitron)
-   - Iframe do Google Maps
-   - Links de WhatsApp, Instagram, Facebook e Linktree
-   - Formulário de agendamento (apenas front-end)
+1. Criar `/mnt/documents/integral-clinica.css` com todo o conteúdo CSS (linhas 11-195 do arquivo atual)
+2. Criar `/mnt/documents/integral-clinica.html` (substituindo o atual) removendo o bloco `<style>...</style>` e adicionando `<link rel="stylesheet" href="integral-clinica.css">` no `<head>`
 
-### Limitações
-- Imagens locais (logo, hero, clínica) serão substituídas por placeholders ou referências externas, pois não existem como URLs públicas
-- Animações do Framer Motion não serão incluídas (são dependentes de JS/React)
-- O accordion do FAQ será implementado com HTML/CSS puro (tag `<details>`)
-- O menu sidebar será implementado com JavaScript vanilla básico
-
-### Entrega
-Um arquivo `integral-clinica.html` pronto para abrir no navegador, disponível para download.
+### Resultado
+Dois arquivos prontos para download, funcionais quando colocados na mesma pasta.
 
