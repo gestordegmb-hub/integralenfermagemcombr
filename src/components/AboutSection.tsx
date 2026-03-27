@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, Heart, Award } from "lucide-react";
+import clinicaImg from "@/assets/clinica.jpg";
 
 const features = [
   { icon: Shield, title: "Segurança", desc: "Protocolos rigorosos e equipamentos de última geração" },
@@ -11,7 +12,15 @@ const AboutSection = () => {
   return (
     <section id="sobre" className="py-20 bg-card">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-[auto_1fr] gap-10 items-start">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="hidden lg:block"
+          >
+            <img src={clinicaImg} alt="Fachada da Integral Clínica de Enfermagem" className="rounded-2xl shadow-lg w-80 object-cover" />
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
