@@ -1,4 +1,5 @@
 import { Heart, Instagram, Facebook, Linkedin } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 const Footer = () => {
   return (
