@@ -31,9 +31,8 @@ const LocationSection = () => {
               <div>
                 <h3 className="font-semibold text-foreground">Endereço</h3>
                 <p className="text-sm text-muted-foreground">
-                  Av. Paulista, 1234 - Sala 56<br />
-                  Bela Vista, São Paulo - SP<br />
-                  CEP: 01310-100
+                  Rua Cuiabá, 193<br />
+                  Cabo Frio - RJ
                 </p>
               </div>
             </div>
