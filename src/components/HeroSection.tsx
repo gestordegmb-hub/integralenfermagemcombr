@@ -28,8 +28,8 @@ const HeroSection = () => {
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-primary-foreground"
           >
-            Cuidado humanizado com a{" "}
-            <span className="text-primary">qualidade</span> que você merece
+            Tratamento avançado de{" "}
+            <span className="text-primary">feridas</span> em Cabo Frio
           </motion.h1>
 
           <motion.p
