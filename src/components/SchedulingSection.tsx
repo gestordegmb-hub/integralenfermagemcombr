@@ -4,16 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Calendar, CheckCircle, MessageCircle } from "lucide-react";
 
 const specialtyOptions = [
-  "Enfermagem Clínica",
-  "Enfermagem Pediátrica",
-  "Enfermagem Neurológica",
-  "Enfermagem Cardiológica",
-  "Curativos Especiais",
-  "Home Care",
-  "Administração de Medicamentos",
-  "Coleta de Exames",
-  "Cuidados Paliativos",
-  "Estomaterapia",
+  "Tratamento de Feridas",
+  "Estomias",
+  "Pé Diabético",
+  "Laserterapia",
+  "Ozonioterapia",
+  "LEDterapia",
+  "Terapia com PRF",
+  "Atendimento Domiciliar",
+  "Podiatria",
+  "Pós-operatórios",
+  "Mentoria e Treinamento",
 ];
 
 const SchedulingSection = () => {
@@ -22,6 +23,7 @@ const SchedulingSection = () => {
     name: "",
     phone: "",
     email: "",
+    address: "",
     specialty: "",
     message: "",
   });
@@ -125,6 +127,16 @@ const SchedulingSection = () => {
                       placeholder="seu@email.com"
                     />
                   </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-1">Endereço</label>
+                  <input
+                    type="text"
+                    value={form.address}
+                    onChange={(e) => setForm({ ...form, address: e.target.value })}
+                    className="w-full px-4 py-2.5 rounded-lg border border-input bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="Rua, número, bairro - cidade"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-1">Especialidade *</label>

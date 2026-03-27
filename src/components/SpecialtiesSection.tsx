@@ -1,19 +1,18 @@
 import { motion } from "framer-motion";
-import { Stethoscope, Baby, Brain, HeartPulse, Syringe, Activity, Pill, Eye, Bone, Droplets, Leaf, Thermometer } from "lucide-react";
+import { Syringe, Activity, Footprints, Zap, Wind, Sun, Droplets, Home, Scissors, Stethoscope, GraduationCap } from "lucide-react";
 
 const specialties = [
-  { icon: Stethoscope, name: "Enfermagem Clínica", desc: "Cuidados gerais com acompanhamento personalizado" },
-  { icon: Baby, name: "Enfermagem Pediátrica", desc: "Atenção especializada para crianças e adolescentes" },
-  { icon: Brain, name: "Enfermagem Neurológica", desc: "Suporte a pacientes com condições neurológicas" },
-  { icon: HeartPulse, name: "Enfermagem Cardiológica", desc: "Monitoramento e cuidados cardiovasculares" },
-  { icon: Syringe, name: "Curativos Especiais", desc: "Tratamento avançado de feridas e lesões" },
-  { icon: Activity, name: "Home Care", desc: "Atendimento domiciliar com qualidade hospitalar" },
-  { icon: Pill, name: "Administração de Medicamentos", desc: "Aplicação segura e monitorada de medicações" },
-  { icon: Eye, name: "Enfermagem Oftalmológica", desc: "Cuidados pré e pós-operatórios oftalmológicos" },
-  { icon: Bone, name: "Enfermagem Ortopédica", desc: "Reabilitação e cuidados ortopédicos especializados" },
-  { icon: Droplets, name: "Coleta de Exames", desc: "Coleta domiciliar e em clínica com precisão" },
-  { icon: Leaf, name: "Cuidados Paliativos", desc: "Conforto e dignidade para pacientes e famílias" },
-  { icon: Thermometer, name: "Estomaterapia", desc: "Cuidados com estomias, feridas e incontinências" },
+  { icon: Syringe, name: "Tratamento de Feridas", desc: "Curativos avançados e acompanhamento completo da cicatrização" },
+  { icon: Activity, name: "Estomias", desc: "Cuidados especializados com estomias intestinais e urinárias" },
+  { icon: Footprints, name: "Pé Diabético", desc: "Prevenção e tratamento especializado para pés diabéticos" },
+  { icon: Zap, name: "Laserterapia", desc: "Terapia a laser para acelerar a cicatrização e reduzir dor" },
+  { icon: Wind, name: "Ozonioterapia", desc: "Tratamento com ozônio para regeneração tecidual" },
+  { icon: Sun, name: "LEDterapia", desc: "Fototerapia com LED para cicatrização e controle de infecções" },
+  { icon: Droplets, name: "Terapia com PRF", desc: "Fibrina rica em plaquetas para regeneração acelerada" },
+  { icon: Home, name: "Atendimento Domiciliar", desc: "Cuidados de enfermagem no conforto da sua casa" },
+  { icon: Scissors, name: "Podiatria", desc: "Cuidados especializados com unhas e pés" },
+  { icon: Stethoscope, name: "Pós-operatórios", desc: "Acompanhamento e curativos em recuperação cirúrgica" },
+  { icon: GraduationCap, name: "Mentoria e Treinamento", desc: "Capacitação para profissionais de enfermagem" },
 ];
 
 const SpecialtiesSection = () => {
