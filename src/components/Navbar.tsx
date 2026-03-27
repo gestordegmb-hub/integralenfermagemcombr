@@ -42,9 +42,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+5511999999999" className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary">
+          <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary">
             <Phone className="w-4 h-4" />
-            (11) 99999-9999
+            (22) 97401-7588
           </a>
           <a href="#agendamento">
             <Button variant="hero" size="sm">Agendar Consulta</Button>
