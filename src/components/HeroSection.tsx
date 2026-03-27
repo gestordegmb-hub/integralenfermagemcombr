@@ -38,9 +38,8 @@ const HeroSection = () => {
             transition={{ delay: 0.35 }}
             className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed"
           >
-            Na Integral, oferecemos atendimento de enfermagem especializado com profissionais
-            altamente qualificados. Sua saúde é a nossa prioridade — agende agora e
-            experimente um cuidado diferenciado.
+            Cuidado especializado, tecnologia e acompanhamento individualizado para promover
+            qualidade de vida e evolução na cicatrização.
           </motion.p>
 
           <motion.div
