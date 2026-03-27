@@ -1,6 +1,7 @@
 import { Heart, Instagram, Facebook, ExternalLink } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
+
 const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground py-12">
