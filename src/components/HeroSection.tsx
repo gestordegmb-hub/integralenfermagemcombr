@@ -1,0 +1,93 @@
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { Calendar, MessageCircle } from "lucide-react";
+import heroImg from "@/assets/hero-clinic.jpg";
+
+const HeroSection = () => {
+  return (
+    <section id="inicio" className="relative min-h-screen flex items-center pt-20">
+      <div className="absolute inset-0 z-0">
+        <img src={heroImg} alt="Clínica Integral - Ambiente moderno e acolhedor" className="w-full h-full object-cover" loading="eager" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/30" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-2xl">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="inline-block bg-primary/20 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-primary/30"
+          >
+            ✦ Excelência em Enfermagem Especializada
+          </motion.span>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-primary-foreground"
+          >
+            Cuidado humanizado com a{" "}
+            <span className="text-primary">qualidade</span> que você merece
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35 }}
+            className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed"
+          >
+            Na Integral, oferecemos atendimento de enfermagem especializado com profissionais
+            altamente qualificados. Sua saúde é a nossa prioridade — agende agora e
+            experimente um cuidado diferenciado.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4"
+          >
+            <a href="#agendamento">
+              <Button variant="hero" size="lg" className="gap-2 text-base px-8 py-6">
+                <Calendar className="w-5 h-5" />
+                Agendar Consulta
+              </Button>
+            </a>
+            <a
+              href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta na Integral Clínica."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="whatsapp" size="lg" className="gap-2 text-base px-8 py-6">
+                <MessageCircle className="w-5 h-5" />
+                Falar no WhatsApp
+              </Button>
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
+            className="mt-10 flex gap-8"
+          >
+            {[
+              { num: "+5.000", label: "Pacientes Atendidos" },
+              { num: "12+", label: "Especialidades" },
+              { num: "98%", label: "Satisfação" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-2xl md:text-3xl font-bold text-primary">{stat.num}</p>
+                <p className="text-sm text-primary-foreground/70">{stat.label}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
