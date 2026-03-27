@@ -35,10 +35,8 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-3 text-sm">Contato</h4>
             <ul className="space-y-2 text-sm opacity-70">
-              <li>Av. Paulista, 1234 - Sala 56</li>
-              <li>Bela Vista, São Paulo - SP</li>
-              <li>(11) 99999-9999</li>
-              <li>contato@integralenfermagem.com.br</li>
+              <li><a href="https://wa.me/5522998271485" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(22) 99827-1485</a></li>
+              <li><a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(22) 97401-7588</a></li>
             </ul>
           </div>
 
