@@ -4,16 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Calendar, CheckCircle, MessageCircle } from "lucide-react";
 
 const specialtyOptions = [
-  "Enfermagem Clínica",
-  "Enfermagem Pediátrica",
-  "Enfermagem Neurológica",
-  "Enfermagem Cardiológica",
-  "Curativos Especiais",
-  "Home Care",
-  "Administração de Medicamentos",
-  "Coleta de Exames",
-  "Cuidados Paliativos",
-  "Estomaterapia",
+  "Tratamento de Feridas",
+  "Estomias",
+  "Pé Diabético",
+  "Laserterapia",
+  "Ozonioterapia",
+  "LEDterapia",
+  "Terapia com PRF",
+  "Atendimento Domiciliar",
+  "Podiatria",
+  "Pós-operatórios",
+  "Mentoria e Treinamento",
 ];
 
 const SchedulingSection = () => {
