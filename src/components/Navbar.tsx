@@ -1,83 +1,120 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Home, Info, Stethoscope, Shield, MessageSquare, BookOpen, HelpCircle, MapPin, Calendar } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
 const navLinks = [
-  { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Especialidades", href: "#especialidades" },
-  { label: "Convênios", href: "#convenios" },
-  { label: "Convênios", href: "#convenios" },
-  { label: "Depoimentos", href: "#depoimentos" },
-  { label: "Blog", href: "#blog" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "#inicio", icon: Home },
+  { label: "Sobre", href: "#sobre", icon: Info },
+  { label: "Especialidades", href: "#especialidades", icon: Stethoscope },
+  { label: "Convênios", href: "#convenios", icon: Shield },
+  { label: "Depoimentos", href: "#depoimentos", icon: MessageSquare },
+  { label: "Blog", href: "#blog", icon: BookOpen },
+  { label: "FAQ", href: "#faq", icon: HelpCircle },
+  { label: "Contato", href: "#contato", icon: MapPin },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md shadow-sm">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-2">
-          <img src={logoImg} alt="Integral Clínica" className="w-10 h-10 rounded-full object-cover" />
-          <div>
-            <span style={{ fontFamily: "'Orbitron', sans-serif" }} className="font-bold text-lg text-foreground leading-tight block">Integral</span>
-            <span className="text-xs text-muted-foreground leading-tight block">Clínica de Enfermagem</span>
+    <>
+      {/* Top bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md shadow-sm">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <button
+              className="text-foreground hover:text-primary transition-colors"
+              onClick={() => setIsOpen(true)}
+              aria-label="Abrir menu"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+            <a href="#inicio" className="flex items-center gap-2">
+              <img src={logoImg} alt="Integral Clínica" className="w-10 h-10 rounded-full object-cover" />
+              <div>
+                <span style={{ fontFamily: "'Orbitron', sans-serif" }} className="font-bold text-lg text-foreground leading-tight block">Integral</span>
+                <span className="text-xs text-muted-foreground leading-tight block">Clínica de Enfermagem</span>
+              </div>
+            </a>
           </div>
-        </a>
 
-        <div className="hidden lg:flex items-center gap-6">
+          <div className="flex items-center gap-3">
+            <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center gap-1 text-sm text-muted-foreground hover:text-primary">
+              <Phone className="w-4 h-4" />
+              (22) 97401-7588
+            </a>
+            <a href="#agendamento">
+              <Button variant="hero" size="sm">Agendar Consulta</Button>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-[60] bg-foreground/50 backdrop-blur-sm"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+      {/* Sidebar */}
+      <aside
+        className={`fixed top-0 left-0 z-[70] h-full w-72 bg-card shadow-2xl transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex items-center justify-between p-4 border-b border-border">
+          <a href="#inicio" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+            <img src={logoImg} alt="Integral Clínica" className="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <span style={{ fontFamily: "'Orbitron', sans-serif" }} className="font-bold text-lg text-foreground leading-tight block">Integral</span>
+              <span className="text-xs text-muted-foreground leading-tight block">Clínica de Enfermagem</span>
+            </div>
+          </a>
+          <button
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            onClick={() => setIsOpen(false)}
+            aria-label="Fechar menu"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <nav className="p-4 space-y-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+              onClick={() => setIsOpen(false)}
             >
+              <link.icon className="w-5 h-5" />
               {link.label}
             </a>
           ))}
-        </div>
+        </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary">
+        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-border space-y-3">
+          <a
+            href="https://wa.me/5522974017588"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
             <Phone className="w-4 h-4" />
             (22) 97401-7588
           </a>
-          <a href="#agendamento">
-            <Button variant="hero" size="sm">Agendar Consulta</Button>
-          </a>
-        </div>
-
-        <button
-          className="lg:hidden text-foreground"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Menu"
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {isOpen && (
-        <div className="lg:hidden bg-card border-t border-border px-4 py-4 space-y-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="block text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-1"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
           <a href="#agendamento" onClick={() => setIsOpen(false)}>
-            <Button variant="hero" size="sm" className="w-full mt-2">Agendar Consulta</Button>
+            <Button variant="hero" size="sm" className="w-full gap-2">
+              <Calendar className="w-4 h-4" />
+              Agendar Consulta
+            </Button>
           </a>
         </div>
-      )}
-    </nav>
+      </aside>
+    </>
   );
 };
 
