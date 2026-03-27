@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Início", href: "#inicio", icon: Home },
   { label: "Sobre", href: "#sobre", icon: Info },
   { label: "Especialidades", href: "#especialidades", icon: Stethoscope },
-  { label: "Convênios", href: "#convenios", icon: Shield },
+  
   { label: "Depoimentos", href: "#depoimentos", icon: MessageSquare },
   { label: "Blog", href: "#blog", icon: BookOpen },
   { label: "FAQ", href: "#faq", icon: HelpCircle },

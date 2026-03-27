@@ -26,7 +26,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm opacity-70">
               <li><a href="#sobre" className="hover:text-primary transition-colors">Sobre a Clínica</a></li>
               <li><a href="#especialidades" className="hover:text-primary transition-colors">Especialidades</a></li>
-              <li><a href="#convenios" className="hover:text-primary transition-colors">Convênios</a></li>
+              
               <li><a href="#depoimentos" className="hover:text-primary transition-colors">Depoimentos</a></li>
               <li><a href="#blog" className="hover:text-primary transition-colors">Blog</a></li>
               <li><a href="#agendamento" className="hover:text-primary transition-colors">Agendamento</a></li>
