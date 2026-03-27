@@ -8,10 +8,6 @@ import {
 
 const faqs = [
   {
-    q: "Quais convênios a Integral aceita?",
-    a: "Aceitamos os principais convênios do mercado, incluindo Unimed, Bradesco Saúde, SulAmérica, Amil, Porto Seguro, NotreDame Intermédica, entre outros. Também atendemos pacientes particulares. Para confirmar se o seu convênio é aceito, entre em contato conosco.",
-  },
-  {
     q: "Como funciona o agendamento de consultas?",
     a: "Você pode agendar pelo nosso formulário online, pelo WhatsApp ou por telefone. Após o envio da solicitação, nossa equipe entra em contato em até 2 horas para confirmar o melhor horário para você.",
   },
