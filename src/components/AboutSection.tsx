@@ -17,7 +17,7 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="hidden lg:block"
+            className=""
           >
             <img src={clinicaImg} alt="Fachada da Integral Clínica de Enfermagem" className="rounded-2xl shadow-lg w-80 object-cover" />
           </motion.div>
