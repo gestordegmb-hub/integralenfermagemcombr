@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import galeria1 from "@/assets/galeria_1.jpg";
 import galeria2 from "@/assets/galeria_2.jpg";
+import galeria3 from "@/assets/galeria_3.jpg";
 
 const photos = [
   { src: galeria1, alt: "Laserterapia - Tratamento com laser", label: "Laserterapia" },
   { src: galeria2, alt: "PRF - Fibrina rica em plaquetas", label: "PRF" },
+  { src: galeria3, alt: "Dra. Viviane - Estomaterapeuta", label: "Dra. Viviane" },
 ];
 
 const GallerySection = () => {
