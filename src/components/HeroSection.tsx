@@ -7,8 +7,8 @@ const HeroSection = () => {
   return (
     <section id="inicio" className="relative flex items-center min-h-[85vh] md:min-h-[90vh] pt-16">
       <div className="absolute inset-0 z-0 bg-foreground">
-        <img src={heroImg} alt="Clínica Integral - Ambiente moderno e acolhedor" className="w-full h-full object-cover object-center" loading="eager" />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/35 to-transparent md:from-foreground/60 md:via-foreground/25 md:to-transparent" />
+        <img src={heroImg} alt="Clínica Integral - Ambiente moderno e acolhedor" className="w-full h-full object-cover object-center" loading="eager" style={{ filter: 'none' }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-foreground/10 md:from-foreground/75 md:via-foreground/40 md:to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10 py-10 md:py-16">
