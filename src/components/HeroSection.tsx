@@ -79,8 +79,8 @@ const HeroSection = () => {
               { num: "✦", label: "Referência na Região dos Lagos" },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">{stat.num}</p>
-                <p className="text-xs sm:text-sm text-primary-foreground/70">{stat.label}</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-bold text-primary drop-shadow-md">{stat.num}</p>
+                <p className="text-xs sm:text-sm text-white/80 drop-shadow-sm">{stat.label}</p>
               </div>
             ))}
           </motion.div>
