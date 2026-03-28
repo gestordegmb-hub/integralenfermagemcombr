@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import galeria1 from "@/assets/galeria_1.jpg";
 import galeria2 from "@/assets/galeria_2.jpg";
+import galeria3 from "@/assets/galeria_3.jpg";
 
 const photos = [
   { src: galeria1, alt: "Laserterapia - Tratamento com laser", label: "Laserterapia" },
   { src: galeria2, alt: "PRF - Fibrina rica em plaquetas", label: "PRF" },
+  { src: galeria3, alt: "Dra. Viviane - Estomaterapeuta", label: "Dra. Viviane" },
 ];
 
 const GallerySection = () => {
@@ -27,7 +29,7 @@ const GallerySection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {photos.map((photo, index) => (
             <motion.div
               key={index}
