@@ -17,7 +17,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-block bg-primary/20 text-primary-foreground px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-primary/30"
+            className="inline-block bg-primary/30 text-white px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/40 backdrop-blur-sm"
           >
             ✦ Excelência em Enfermagem Especializada
           </motion.span>
