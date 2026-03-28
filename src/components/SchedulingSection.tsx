@@ -30,8 +30,8 @@ const SchedulingSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+    const text = `Olá! Gostaria de agendar uma consulta na Integral Clínica.%0A%0A*Nome:* ${form.name}%0A*Telefone:* ${form.phone}${form.email ? `%0A*E-mail:* ${form.email}` : ""}${form.address ? `%0A*Endereço:* ${form.address}` : ""}%0A*Especialidade:* ${form.specialty}${form.message ? `%0A*Mensagem:* ${form.message}` : ""}`;
+    window.open(`https://wa.me/5522974017588?text=${text}`, "_blank");
   };
 
   return (
