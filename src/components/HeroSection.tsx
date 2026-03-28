@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section id="inicio" className="relative flex items-center min-h-[85vh] md:min-h-[90vh] pt-16">
       <div className="absolute inset-0 z-0 bg-foreground">
         <img src={heroImg} alt="Clínica Integral - Ambiente moderno e acolhedor" className="w-full h-full object-cover object-center" loading="eager" />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/50 md:from-foreground/90 md:via-foreground/75 md:to-foreground/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/60 to-transparent md:from-foreground/85 md:via-foreground/50 md:to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10 py-10 md:py-16">
