@@ -21,7 +21,7 @@ const Index = () => {
         <SpecialtiesSection />
         <ProfessionalSection />
         <TestimonialsSection />
-        <BlogSection />
+        <BeforeAfterSection />
         <SchedulingSection />
         <FAQSection />
         <LocationSection />
