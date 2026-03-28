@@ -34,24 +34,24 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="depoimentos" className="py-20 bg-card">
-      <div className="container mx-auto px-4">
+    <section id="depoimentos" className="py-14 sm:py-20 bg-card">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-14"
+          className="text-center max-w-2xl mx-auto mb-10 sm:mb-14"
         >
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Depoimentos</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-3 sm:mb-4 text-foreground">
             O que nossos pacientes dizem
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             A satisfação dos nossos pacientes é o nosso maior indicador de qualidade.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}
@@ -67,13 +67,13 @@ const TestimonialsSection = () => {
                 className="w-full object-cover"
                 loading="lazy"
               />
-              <div className="p-4">
-                <div className="flex gap-1 mb-2">
+              <div className="p-3 sm:p-4">
+                <div className="flex gap-0.5 sm:gap-1 mb-1.5 sm:mb-2">
                   {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+                    <Star key={j} className="w-3 h-3 sm:w-4 sm:h-4 fill-primary text-primary" />
                   ))}
                 </div>
-                <p className="font-semibold text-sm text-foreground">{t.name}</p>
+                <p className="font-semibold text-xs sm:text-sm text-foreground">{t.name}</p>
               </div>
             </motion.div>
           ))}

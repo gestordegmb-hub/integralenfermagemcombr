@@ -27,19 +27,19 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-20">
-      <div className="container mx-auto px-4 max-w-3xl">
+    <section id="faq" className="py-14 sm:py-20">
+      <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-14"
+          className="text-center mb-10 sm:mb-14"
         >
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">FAQ</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-3 sm:mb-4 text-foreground">
             Perguntas frequentes
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             Tire suas dúvidas sobre nossos serviços e atendimento.
           </p>
         </motion.div>
@@ -49,17 +49,17 @@ const FAQSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <Accordion type="single" collapsible className="space-y-3">
+          <Accordion type="single" collapsible className="space-y-2 sm:space-y-3">
             {faqs.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`item-${i}`}
-                className="bg-card rounded-lg border border-border px-6"
+                className="bg-card rounded-lg border border-border px-4 sm:px-6"
               >
-                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+                <AccordionTrigger className="text-left text-sm sm:text-base font-semibold text-foreground hover:text-primary py-3 sm:py-4">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-sm text-muted-foreground pb-3 sm:pb-4">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
