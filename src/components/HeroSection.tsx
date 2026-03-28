@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section id="inicio" className="relative flex items-center min-h-[85vh] md:min-h-[90vh] pt-16">
       <div className="absolute inset-0 z-0 bg-foreground">
         <img src={heroImg} alt="Clínica Integral - Ambiente moderno e acolhedor" className="w-full h-full object-cover object-center" loading="eager" style={{ filter: 'none' }} />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-foreground/10 md:from-foreground/75 md:via-foreground/40 md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent md:from-foreground/65 md:via-foreground/30 md:to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10 py-10 md:py-16">
@@ -17,7 +17,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-block bg-primary/20 text-primary-foreground px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-primary/30"
+            className="inline-block bg-primary/30 text-white px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/40 backdrop-blur-sm"
           >
             ✦ Excelência em Enfermagem Especializada
           </motion.span>
@@ -26,7 +26,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 sm:mb-6 text-primary-foreground"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 sm:mb-6 text-white drop-shadow-lg"
           >
             Tratamento avançado de{" "}
             <span className="text-primary">feridas</span> em Cabo Frio
@@ -36,7 +36,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 }}
-            className="text-base sm:text-lg md:text-xl text-primary-foreground/80 mb-6 sm:mb-8 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed drop-shadow-md"
           >
             Cuidado especializado, tecnologia e acompanhamento individualizado para promover
             qualidade de vida e evolução na cicatrização.
@@ -79,8 +79,8 @@ const HeroSection = () => {
               { num: "✦", label: "Referência na Região dos Lagos" },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">{stat.num}</p>
-                <p className="text-xs sm:text-sm text-primary-foreground/70">{stat.label}</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-bold text-primary drop-shadow-md">{stat.num}</p>
+                <p className="text-xs sm:text-sm text-white/80 drop-shadow-sm">{stat.label}</p>
               </div>
             ))}
           </motion.div>
