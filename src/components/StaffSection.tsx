@@ -10,13 +10,6 @@ const staff = [
     initials: "CF",
   },
   {
-    name: "Dr. Rafael Mendes",
-    role: "Enfermeiro Especialista · COREN 23456",
-    specialty: "Especialista em Home Care",
-    bio: "Referência em atendimento domiciliar e gestão de cuidados prolongados.",
-    initials: "RM",
-  },
-  {
     name: "Dra. Juliana Santos",
     role: "Enfermeira Especialista · COREN 34567",
     specialty: "Especialista em Pediatria",

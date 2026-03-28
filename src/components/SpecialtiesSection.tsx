@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Syringe, Activity, Footprints, Zap, Wind, Sun, Droplets, Home, Scissors, Stethoscope, GraduationCap } from "lucide-react";
+import { Syringe, Activity, Footprints, Zap, Wind, Sun, Droplets, Scissors, Stethoscope, GraduationCap } from "lucide-react";
 
 const specialties = [
   { icon: Syringe, name: "Tratamento de Feridas", desc: "Curativos avançados e acompanhamento completo da cicatrização" },
