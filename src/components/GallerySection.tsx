@@ -1,4 +1,15 @@
 import { motion } from "framer-motion";
+import galeria1 from "@/assets/galeria_1.jpg";
+import galeria2 from "@/assets/galeria_2.jpg";
+import galeria3 from "@/assets/galeria_3.jpg";
+import galeria4 from "@/assets/galeria_4.jpg";
+
+const photos = [
+  { src: galeria1, alt: "Laserterapia - Tratamento com laser", label: "Laserterapia" },
+  { src: galeria2, alt: "PRF - Fibrina rica em plaquetas", label: "Terapia com PRF" },
+  { src: galeria3, alt: "Ozonioterapia - Tratamento com ozônio", label: "Ozonioterapia" },
+  { src: galeria4, alt: "Procedimento clínico", label: "Procedimento" },
+];
 
 const GallerySection = () => {
   return (
@@ -20,8 +31,27 @@ const GallerySection = () => {
           </p>
         </motion.div>
 
-        <div className="text-center text-muted-foreground py-12">
-          <p>Em breve novas imagens serão adicionadas.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {photos.map((photo, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group relative overflow-hidden rounded-2xl shadow-lg aspect-[4/5]"
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <span className="text-white font-semibold text-lg">{photo.label}</span>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
