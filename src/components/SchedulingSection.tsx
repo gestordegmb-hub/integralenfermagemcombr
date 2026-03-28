@@ -11,7 +11,7 @@ const specialtyOptions = [
   "Ozonioterapia",
   "LEDterapia",
   "Terapia com PRF",
-  "Atendimento Domiciliar",
+  
   "Podiatria",
   "Pós-operatórios",
   "Mentoria e Treinamento",

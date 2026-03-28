@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Syringe, Activity, Footprints, Zap, Wind, Sun, Droplets, Home, Scissors, Stethoscope, GraduationCap } from "lucide-react";
+import { Syringe, Activity, Footprints, Zap, Wind, Sun, Droplets, Scissors, Stethoscope, GraduationCap } from "lucide-react";
 
 const specialties = [
   { icon: Syringe, name: "Tratamento de Feridas", desc: "Curativos avançados e acompanhamento completo da cicatrização" },
@@ -9,7 +9,7 @@ const specialties = [
   { icon: Wind, name: "Ozonioterapia", desc: "Tratamento com ozônio para regeneração tecidual" },
   { icon: Sun, name: "LEDterapia", desc: "Fototerapia com LED para cicatrização e controle de infecções" },
   { icon: Droplets, name: "Terapia com PRF", desc: "Fibrina rica em plaquetas para regeneração acelerada" },
-  { icon: Home, name: "Atendimento Domiciliar", desc: "Cuidados de enfermagem no conforto da sua casa" },
+  
   { icon: Scissors, name: "Podiatria", desc: "Cuidados especializados com unhas e pés" },
   { icon: Stethoscope, name: "Pós-operatórios", desc: "Acompanhamento e curativos em recuperação cirúrgica" },
   { icon: GraduationCap, name: "Mentoria e Treinamento", desc: "Capacitação para profissionais de enfermagem" },

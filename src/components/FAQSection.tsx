@@ -12,10 +12,6 @@ const faqs = [
     a: "Você pode agendar pelo nosso formulário online, pelo WhatsApp ou por telefone. Após o envio da solicitação, nossa equipe entra em contato em até 2 horas para confirmar o melhor horário para você.",
   },
   {
-    q: "Vocês atendem em domicílio?",
-    a: "Sim! Nosso serviço de Home Care oferece atendimento domiciliar com a mesma qualidade da clínica. Realizamos curativos, administração de medicamentos, coleta de exames e acompanhamento de pacientes no conforto de casa.",
-  },
-  {
     q: "Qual o horário de funcionamento da clínica?",
     a: "Funcionamos de segunda a sexta-feira, das 09:00 às 18:00, e aos sábados das 09:00 às 13:00. Domingos e feriados estamos fechados. Para urgências, entre em contato pelo WhatsApp que nossa equipe poderá orientá-lo.",
   },
