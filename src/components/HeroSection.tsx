@@ -14,8 +14,8 @@ const HeroSection = () => {
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
-        {/* Layered gradient: left-side scrim for text readability, image stays clear on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10 sm:from-black/75 sm:via-black/35 sm:to-transparent" />
+        {/* Strong left scrim for guaranteed text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/15 sm:from-black/85 sm:via-black/45 sm:to-transparent" />
         {/* Bottom fade into page */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
@@ -27,8 +27,8 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-white/60 font-medium mb-5 sm:mb-6"
-            style={{ fontFamily: "'Inter', sans-serif", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
+            className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-white/80 font-medium mb-5 sm:mb-6"
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Excelência em Enfermagem Especializada
           </motion.p>
@@ -39,7 +39,6 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             className="text-[2.25rem] sm:text-5xl lg:text-6xl xl:text-[4rem] font-semibold leading-[1.08] mb-5 sm:mb-6 text-white font-serif"
-            style={{ textShadow: "0 2px 12px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.3)" }}
           >
             Tratamento avançado
             <br />
@@ -51,8 +50,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.7 }}
-            className="text-sm sm:text-[15px] lg:text-base text-white/80 mb-8 sm:mb-10 leading-relaxed max-w-md font-light"
-            style={{ textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}
+            className="text-sm sm:text-[15px] lg:text-base text-white/90 mb-8 sm:mb-10 leading-relaxed max-w-md"
           >
             Cuidado especializado, tecnologia e acompanhamento individualizado
             para promover qualidade de vida e evolução na cicatrização.
@@ -77,7 +75,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="w-full sm:w-auto"
             >
-              <Button variant="heroOutline" size="lg" className="gap-2.5 px-8 py-6 w-full sm:w-auto text-sm border-white/25 text-white hover:bg-white/10">
+              <Button variant="heroOutline" size="lg" className="gap-2.5 px-8 py-6 w-full sm:w-auto text-sm border-white/30 text-white hover:bg-white/10">
                 <MessageCircle className="w-4 h-4" />
                 Falar no WhatsApp
               </Button>
@@ -98,18 +96,12 @@ const HeroSection = () => {
             ].map((stat) => (
               <div key={stat.label} className="relative">
                 <div className="flex items-baseline gap-1.5">
-                  <p
-                    className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white font-serif"
-                    style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
-                  >
+                  <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white font-serif">
                     {stat.num}
                   </p>
                   {stat.icon && <Star className="w-3.5 h-3.5 text-primary fill-primary" />}
                 </div>
-                <p
-                  className="text-[9px] sm:text-[10px] text-white/50 mt-1.5 uppercase tracking-[0.18em] font-medium"
-                  style={{ textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
-                >
+                <p className="text-[9px] sm:text-[10px] text-white/70 mt-1.5 uppercase tracking-[0.18em] font-medium">
                   {stat.label}
                 </p>
               </div>
