@@ -1,81 +1,65 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock, Phone } from "lucide-react";
 
-const contactInfo = [
-  {
-    icon: MapPin,
-    title: "Endereço",
-    content: (
-      <p className="text-sm text-muted-foreground">
-        Rua Cuiabá, 193<br />Cabo Frio - RJ
-      </p>
-    ),
-  },
-  {
-    icon: Clock,
-    title: "Horário de Funcionamento",
-    content: (
-      <p className="text-sm text-muted-foreground">
-        Segunda a Sexta: 09:00 às 18:00<br />
-        Sábado: 09:00 às 13:00<br />
-        Domingo e Feriados: Fechado
-      </p>
-    ),
-  },
-  {
-    icon: Phone,
-    title: "WhatsApp",
-    content: (
-      <div className="space-y-1">
-        <a href="https://wa.me/5522998271485" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors block">(22) 99827-1485</a>
-        <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors block">(22) 97401-7588</a>
-      </div>
-    ),
-  },
-];
-
 const LocationSection = () => {
   return (
-    <section id="contato" className="py-16 sm:py-24 bg-card">
+    <section id="contato" className="py-20 sm:py-32 bg-muted/40">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-12 sm:mb-16"
+          transition={{ duration: 0.8 }}
+          className="text-center max-w-lg mx-auto mb-14 sm:mb-20"
         >
-          <span className="section-label">Localização & Contato</span>
-          <h2 className="section-title">Venha nos visitar</h2>
+          <span className="section-label">Localização</span>
+          <h2 className="section-title">Venha nos Visitar</h2>
           <div className="premium-divider" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="space-y-6"
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
           >
-            {contactInfo.map((item) => (
+            {[
+              { icon: MapPin, title: "Endereço", lines: ["Rua Cuiabá, 193", "Cabo Frio — RJ"] },
+              { icon: Clock, title: "Horário", lines: ["Seg — Sex: 09:00 às 18:00", "Sáb: 09:00 às 13:00", "Dom e Feriados: Fechado"] },
+            ].map((item) => (
               <div key={item.title} className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-xl bg-primary/8 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-lg bg-primary/6 flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-[18px] h-[18px] text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground text-sm mb-1">{item.title}</h3>
-                  {item.content}
+                  <h3 className="font-medium text-sm text-foreground mb-1 font-sans">{item.title}</h3>
+                  {item.lines.map((l) => (
+                    <p key={l} className="text-[13px] text-muted-foreground leading-relaxed">{l}</p>
+                  ))}
                 </div>
               </div>
             ))}
+
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-lg bg-primary/6 flex items-center justify-center flex-shrink-0">
+                <Phone className="w-[18px] h-[18px] text-primary" />
+              </div>
+              <div>
+                <h3 className="font-medium text-sm text-foreground mb-1 font-sans">WhatsApp</h3>
+                <a href="https://wa.me/5522998271485" target="_blank" rel="noopener noreferrer" className="text-[13px] text-muted-foreground hover:text-primary transition-colors block">(22) 99827-1485</a>
+                <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="text-[13px] text-muted-foreground hover:text-primary transition-colors block">(22) 97401-7588</a>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="rounded-2xl overflow-hidden shadow-lg h-72 sm:h-80 lg:h-auto border border-border/50"
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="rounded-xl overflow-hidden h-72 sm:h-80 lg:h-auto border border-border/40"
           >
             <iframe
               title="Localização Integral Clínica"
