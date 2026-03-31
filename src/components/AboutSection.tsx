@@ -10,76 +10,84 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-14 sm:py-20 bg-card">
+    <section id="sobre" className="py-16 sm:py-24 bg-card">
       <div className="container mx-auto px-4 sm:px-6">
-        {/* Mobile: imagem acima */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="lg:hidden mb-6 sm:mb-8"
-        >
-          <img src={clinicaImg} alt="Fachada da Integral Clínica de Enfermagem" className="rounded-2xl shadow-lg w-full max-w-md mx-auto object-cover" />
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-stretch">
-          {/* Coluna esquerda */}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* Image Column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col gap-6 sm:gap-8"
+            transition={{ duration: 0.7 }}
+            className="space-y-6"
           >
-            <div className="hidden lg:block">
-              <img src={clinicaImg} alt="Fachada da Integral Clínica de Enfermagem" className="rounded-2xl shadow-lg w-full h-72 object-cover" />
+            <div className="relative">
+              <img
+                src={clinicaImg}
+                alt="Fachada da Integral Clínica de Enfermagem"
+                className="rounded-2xl shadow-xl w-full h-64 sm:h-80 lg:h-96 object-cover"
+              />
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-2xl -z-10 hidden lg:block" />
             </div>
 
-            <div className="bg-primary/10 rounded-2xl p-4 sm:p-6 space-y-3 sm:space-y-4 flex-1">
-              {[
-                { title: "Nossa Missão", text: "Proporcionar cuidados de enfermagem especializados com excelência, segurança e humanização, contribuindo para a saúde e qualidade de vida dos nossos pacientes." },
-                { title: "Nossa Visão", text: "Ser referência regional em enfermagem especializada, reconhecida pela qualidade do atendimento e pela inovação nos cuidados de saúde." },
-                { title: "Nossos Valores", text: "Ética, transparência, respeito ao paciente, compromisso com a qualidade e busca constante por atualização científica." },
-              ].map((item) => (
-                <div key={item.title} className="bg-card rounded-xl p-4 sm:p-5 shadow-md">
-                  <h3 className="font-bold text-base sm:text-lg text-foreground mb-1">{item.title}</h3>
-                  <p className="text-muted-foreground text-xs sm:text-sm">{item.text}</p>
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {features.map((f, i) => (
+                <motion.div
+                  key={f.title}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * i }}
+                  className="flex items-start gap-3 p-4 rounded-xl bg-accent/50 hover:bg-accent transition-colors duration-300"
+                >
+                  <f.icon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-sm text-foreground">{f.title}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
+                  </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {/* Coluna direita */}
+          {/* Content Column */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col justify-center"
+            transition={{ duration: 0.7 }}
           >
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Sobre a Clínica</span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 sm:mb-6 text-foreground">
+            <span className="section-label">Sobre a Clínica</span>
+            <h2 className="section-title">
               Referência em enfermagem especializada em Cabo Frio
             </h2>
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
-              A Integral Clínica de Enfermagem Especializada nasceu da experiência prática e do compromisso com um
-              cuidado mais humano. Localizada em Cabo Frio, é referência na Região dos Lagos unindo tecnologia e atendimento
-              individualizado.
-            </p>
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
-              À frente está a Dra. Viviane Paz Torres, Enfermeira Estomaterapeuta com mais de 15 anos de experiência.
-              Também atua como Responsável Técnica do Serviço de Atenção à Pessoa com Estomia há mais de 12 anos.
-            </p>
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6 sm:mb-8">
-              Busca constante por atualização e soluções que fazem diferença na recuperação.
-              Referência em tratamento com segurança, ciência, tecnologia e confiança.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-              {features.map((f) => (
-                <div key={f.title} className="flex items-start gap-3 p-3 rounded-lg bg-accent/50">
-                  <f.icon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-sm text-foreground">{f.title}</p>
-                    <p className="text-xs text-muted-foreground">{f.desc}</p>
-                  </div>
+            <div className="premium-divider !mx-0" />
+
+            <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <p>
+                A Integral Clínica de Enfermagem Especializada nasceu da experiência prática e do compromisso com um
+                cuidado mais humano. Localizada em Cabo Frio, é referência na Região dos Lagos unindo tecnologia e atendimento
+                individualizado.
+              </p>
+              <p>
+                À frente está a Dra. Viviane Paz Torres, Enfermeira Estomaterapeuta com mais de 15 anos de experiência.
+                Também atua como Responsável Técnica do Serviço de Atenção à Pessoa com Estomia há mais de 12 anos.
+              </p>
+              <p>
+                Busca constante por atualização e soluções que fazem diferença na recuperação.
+                Referência em tratamento com segurança, ciência, tecnologia e confiança.
+              </p>
+            </div>
+
+            <div className="mt-8 bg-muted/50 rounded-2xl p-5 sm:p-6 space-y-3">
+              {[
+                { title: "Nossa Missão", text: "Proporcionar cuidados de enfermagem especializados com excelência, segurança e humanização." },
+                { title: "Nossa Visão", text: "Ser referência regional em enfermagem especializada, reconhecida pela qualidade e inovação." },
+                { title: "Nossos Valores", text: "Ética, transparência, respeito ao paciente e compromisso com a qualidade." },
+              ].map((item) => (
+                <div key={item.title} className="bg-card rounded-xl p-4 shadow-sm border border-border/50">
+                  <h3 className="font-bold text-sm text-foreground mb-1">{item.title}</h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>
