@@ -26,39 +26,40 @@ const specialties = [
 
 const SpecialtiesSection = () => {
   return (
-    <section id="especialidades" className="py-14 sm:py-20">
+    <section id="especialidades" className="py-16 sm:py-24 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-10 sm:mb-14"
+          className="text-center max-w-2xl mx-auto mb-12 sm:mb-16"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Especialidades</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-3 sm:mb-4 text-foreground">
+          <span className="section-label">Especialidades</span>
+          <h2 className="section-title">
             Atendimento completo para suas necessidades
           </h2>
-          <p className="text-sm sm:text-base text-muted-foreground">
+          <div className="premium-divider" />
+          <p className="section-desc">
             Contamos com uma ampla gama de especialidades para oferecer o cuidado ideal
             em cada fase da vida.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
           {specialties.map((s, i) => (
             <motion.div
               key={s.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="bg-card rounded-xl p-4 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer border border-transparent hover:border-primary/20"
+              transition={{ delay: i * 0.04, duration: 0.5 }}
+              className="premium-card p-4 sm:p-5 group cursor-pointer hover:border-primary/20 hover:-translate-y-1"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors overflow-hidden">
-                <img src={s.img} alt={s.name} className="w-8 h-8 sm:w-10 sm:h-10 object-contain" loading="lazy" width={40} height={40} />
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary/8 flex items-center justify-center mb-3 group-hover:bg-primary/15 transition-all duration-300 overflow-hidden">
+                <img src={s.img} alt={s.name} className="w-8 h-8 sm:w-9 sm:h-9 object-contain" loading="lazy" width={36} height={36} />
               </div>
-              <h3 className="font-semibold text-sm sm:text-base text-foreground mb-1">{s.name}</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground">{s.desc}</p>
+              <h3 className="font-semibold text-xs sm:text-sm text-foreground mb-1 leading-tight">{s.name}</h3>
+              <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>
