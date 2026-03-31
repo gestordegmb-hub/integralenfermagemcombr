@@ -5,89 +5,62 @@ import clinicaImg from "@/assets/clinica.jpeg";
 const features = [
   { icon: Shield, title: "Segurança", desc: "Protocolos rigorosos e equipamentos de última geração" },
   { icon: Heart, title: "Humanização", desc: "Atendimento acolhedor centrado no paciente" },
-  { icon: Award, title: "Qualidade", desc: "Profissionais com certificações e especializações" },
+  { icon: Award, title: "Qualidade", desc: "Profissionais certificados e especializados" },
 ];
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-16 sm:py-24 bg-card">
+    <section id="sobre" className="py-20 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Image Column */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Image */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="space-y-6"
+            transition={{ duration: 0.8 }}
           >
-            <div className="relative">
-              <img
-                src={clinicaImg}
-                alt="Fachada da Integral Clínica de Enfermagem"
-                className="rounded-2xl shadow-xl w-full h-64 sm:h-80 lg:h-96 object-cover"
-              />
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-2xl -z-10 hidden lg:block" />
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {features.map((f, i) => (
-                <motion.div
-                  key={f.title}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 * i }}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-accent/50 hover:bg-accent transition-colors duration-300"
-                >
-                  <f.icon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-sm text-foreground">{f.title}</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <img
+              src={clinicaImg}
+              alt="Fachada da Integral Clínica de Enfermagem"
+              className="rounded-xl w-full h-72 sm:h-96 object-cover"
+            />
           </motion.div>
 
-          {/* Content Column */}
+          {/* Content */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.8 }}
           >
             <span className="section-label">Sobre a Clínica</span>
             <h2 className="section-title">
-              Referência em enfermagem especializada em Cabo Frio
+              Referência em enfermagem especializada
             </h2>
             <div className="premium-divider !mx-0" />
 
-            <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+            <div className="space-y-4 mt-8 text-[14px] sm:text-[15px] text-muted-foreground leading-[1.8]">
               <p>
                 A Integral Clínica de Enfermagem Especializada nasceu da experiência prática e do compromisso com um
-                cuidado mais humano. Localizada em Cabo Frio, é referência na Região dos Lagos unindo tecnologia e atendimento
-                individualizado.
+                cuidado mais humano. Localizada em Cabo Frio, é referência na Região dos Lagos.
               </p>
               <p>
-                À frente está a Dra. Viviane Paz Torres, Enfermeira Estomaterapeuta com mais de 15 anos de experiência.
-                Também atua como Responsável Técnica do Serviço de Atenção à Pessoa com Estomia há mais de 12 anos.
-              </p>
-              <p>
-                Busca constante por atualização e soluções que fazem diferença na recuperação.
-                Referência em tratamento com segurança, ciência, tecnologia e confiança.
+                À frente está a Dra. Viviane Paz Torres, Enfermeira Estomaterapeuta com mais de 15 anos de experiência
+                e Responsável Técnica do Serviço de Atenção à Pessoa com Estomia há mais de 12 anos.
               </p>
             </div>
 
-            <div className="mt-8 bg-muted/50 rounded-2xl p-5 sm:p-6 space-y-3">
-              {[
-                { title: "Nossa Missão", text: "Proporcionar cuidados de enfermagem especializados com excelência, segurança e humanização." },
-                { title: "Nossa Visão", text: "Ser referência regional em enfermagem especializada, reconhecida pela qualidade e inovação." },
-                { title: "Nossos Valores", text: "Ética, transparência, respeito ao paciente e compromisso com a qualidade." },
-              ].map((item) => (
-                <div key={item.title} className="bg-card rounded-xl p-4 shadow-sm border border-border/50">
-                  <h3 className="font-bold text-sm text-foreground mb-1">{item.title}</h3>
-                  <p className="text-muted-foreground text-xs leading-relaxed">{item.text}</p>
+            <div className="mt-10 space-y-4">
+              {features.map((f) => (
+                <div key={f.title} className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/12 transition-colors duration-300">
+                    <f.icon className="w-[18px] h-[18px] text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-sm text-foreground">{f.title}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">{f.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
