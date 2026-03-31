@@ -28,24 +28,25 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-card/95 backdrop-blur-xl border-b border-border/50 py-3"
-            : "bg-transparent py-5"
+            ? "bg-card/95 backdrop-blur-xl border-b border-border/50 py-3 shadow-sm"
+            : "bg-gradient-to-b from-black/40 to-transparent py-5"
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8 flex items-center justify-between">
           <a href="#inicio" className="flex items-center gap-3">
-            <img src={logoImg} alt="Integral Clínica" className="w-9 h-9 rounded-full object-cover" />
+            <img src={logoImg} alt="Integral Clínica" className="w-9 h-9 rounded-full object-cover ring-1 ring-white/10" />
             <div>
               <span
                 className={`font-semibold text-sm sm:text-base leading-tight block transition-colors duration-500 tracking-wide font-serif ${
-                  scrolled ? "text-foreground" : "text-primary-foreground"
+                  scrolled ? "text-foreground" : "text-white"
                 }`}
+                style={!scrolled ? { textShadow: "0 1px 4px rgba(0,0,0,0.3)" } : undefined}
               >
                 Integral
               </span>
               <span
                 className={`text-[9px] uppercase tracking-[0.2em] leading-tight block transition-colors duration-500 ${
-                  scrolled ? "text-muted-foreground" : "text-primary-foreground/50"
+                  scrolled ? "text-muted-foreground" : "text-white/60"
                 }`}
               >
                 Clínica de Enfermagem
@@ -60,8 +61,9 @@ const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 className={`text-[11px] uppercase tracking-[0.15em] font-medium transition-colors duration-300 hover:text-primary ${
-                  scrolled ? "text-muted-foreground" : "text-primary-foreground/60 hover:text-primary-foreground"
+                  scrolled ? "text-muted-foreground" : "text-white/70 hover:text-white"
                 }`}
+                style={!scrolled ? { textShadow: "0 1px 3px rgba(0,0,0,0.2)" } : undefined}
               >
                 {link.label}
               </a>
@@ -73,14 +75,14 @@ const Navbar = () => {
               <Button
                 variant={scrolled ? "default" : "heroOutline"}
                 size="sm"
-                className={`text-[11px] px-5 ${!scrolled ? "border-primary-foreground/20 text-primary-foreground" : ""}`}
+                className={`text-[11px] px-5 ${!scrolled ? "border-white/30 text-white hover:bg-white/10" : ""}`}
               >
                 Agendar
               </Button>
             </a>
             <button
               className={`lg:hidden p-2 rounded-lg transition-all duration-300 ${
-                scrolled ? "text-foreground hover:bg-muted" : "text-primary-foreground/80 hover:text-primary-foreground"
+                scrolled ? "text-foreground hover:bg-muted" : "text-white/90 hover:text-white"
               }`}
               onClick={() => setIsOpen(true)}
               aria-label="Abrir menu"
