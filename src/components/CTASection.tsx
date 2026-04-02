@@ -4,7 +4,7 @@ import { MessageCircle, Phone, CheckCircle } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="relative py-24 sm:py-32 bg-primary overflow-hidden">
+    <section className="relative py-16 sm:py-24 lg:py-32 bg-primary overflow-hidden">
       {/* Subtle pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -13,7 +13,7 @@ const CTASection = () => {
         }} />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,15 +21,15 @@ const CTASection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-2xl mx-auto text-center"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white font-serif italic leading-[1.15] mb-6">
+          <h2 className="text-[28px] sm:text-4xl lg:text-5xl font-semibold text-white font-serif italic leading-[1.15] mb-6 sm:mb-8">
             Agende Sua Consulta com Especialistas
           </h2>
-          <p className="text-[15px] text-white/70 leading-relaxed mb-8 font-sans max-w-lg mx-auto">
+          <p className="text-[15px] sm:text-base text-white/70 leading-[1.65] mb-8 sm:mb-10 font-sans max-w-lg mx-auto">
             Dê o primeiro passo para um cuidado de saúde verdadeiramente especializado.
             Nossa equipe está pronta para atendê-lo.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10">
+          <div className="flex flex-wrap justify-center gap-5 sm:gap-8 mb-10 sm:mb-12">
             {[
               "Resposta em até 1 hora",
               "Atendimento 6 dias por semana",
@@ -37,7 +37,7 @@ const CTASection = () => {
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-gold flex-shrink-0" />
-                <span className="text-[12px] text-white/80 font-sans font-medium">{item}</span>
+                <span className="text-[13px] sm:text-[14px] text-white/80 font-sans font-medium">{item}</span>
               </div>
             ))}
           </div>
@@ -48,7 +48,7 @@ const CTASection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="hero" size="lg" className="gap-2.5 px-10 h-14 w-full sm:w-auto uppercase text-[12px] tracking-[0.15em]">
+              <Button variant="hero" size="lg" className="gap-2.5 px-10 h-[52px] w-full sm:w-auto uppercase text-[13px] tracking-[0.12em] hover:scale-105">
                 <MessageCircle className="w-[18px] h-[18px]" />
                 Agendar pelo WhatsApp
               </Button>
@@ -57,7 +57,7 @@ const CTASection = () => {
               <Button
                 variant="heroOutline"
                 size="lg"
-                className="gap-2.5 px-10 h-14 w-full sm:w-auto uppercase text-[12px] tracking-[0.15em]"
+                className="gap-2.5 px-10 h-[52px] w-full sm:w-auto uppercase text-[13px] tracking-[0.12em]"
               >
                 <Phone className="w-[18px] h-[18px]" />
                 Ligar Agora

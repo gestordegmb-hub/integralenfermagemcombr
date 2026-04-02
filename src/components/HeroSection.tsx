@@ -6,7 +6,7 @@ import heroImg from "@/assets/hero-clinic.jpg";
 const HeroSection = () => {
   return (
     <section id="inicio" className="relative flex items-end min-h-screen overflow-hidden">
-      {/* Background image — sharp, no blur */}
+      {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImg}
@@ -14,20 +14,20 @@ const HeroSection = () => {
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
-        {/* Gradient overlay — transparent left (professional visible), dark on right (text area) */}
-        <div className="absolute inset-0 bg-gradient-to-l from-[rgba(10,20,35,0.85)] via-[rgba(15,25,45,0.55)] to-[rgba(15,25,45,0.2)]" />
+        {/* Gradient overlay — darker on text side (right), clear on left */}
+        <div className="absolute inset-0 bg-gradient-to-l from-[rgba(10,20,35,0.88)] via-[rgba(15,25,45,0.55)] to-[rgba(15,25,45,0.15)]" />
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-20 sm:pb-28 lg:pb-32 pt-32 sm:pt-40">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-20 sm:pb-28 lg:pb-36 pt-32 sm:pt-40">
         <div className="max-w-xl lg:max-w-2xl ml-auto">
           {/* Label */}
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-gold font-medium mb-6 sm:mb-8 font-sans"
+            className="text-[11px] sm:text-[12px] uppercase tracking-[0.25em] text-gold font-medium mb-6 sm:mb-8 font-sans"
           >
             Enfermagem Especializada
           </motion.p>
@@ -37,7 +37,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-semibold leading-[1.06] mb-6 sm:mb-8 text-white font-serif italic [text-shadow:_0_2px_8px_rgba(0,0,0,0.6)]"
+            className="text-[clamp(36px,8vw,64px)] font-semibold leading-[1.1] mb-6 sm:mb-8 text-white font-serif italic [text-shadow:_0_2px_8px_rgba(0,0,0,0.4)]"
           >
             Cuidado Especializado
             <br />
@@ -49,7 +49,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.7 }}
-            className="text-[15px] sm:text-base lg:text-lg text-white/95 mb-10 sm:mb-12 leading-relaxed max-w-lg font-light font-sans"
+            className="text-[15px] sm:text-[16px] lg:text-[18px] text-white/95 mb-10 sm:mb-12 leading-[1.65] max-w-lg font-light font-sans"
           >
             Referência em enfermagem avançada na Região dos Lagos. Cuidados especializados,
             tecnologia e acompanhamento personalizado com a mais alta qualidade técnica e humana.
@@ -70,7 +70,7 @@ const HeroSection = () => {
               <Button
                 variant="hero"
                 size="lg"
-                className="gap-2.5 px-10 h-14 w-full sm:w-auto"
+                className="gap-2.5 px-8 sm:px-10 h-[52px] w-full sm:w-auto text-[13px] sm:text-[14px] hover:scale-105"
               >
                 <MessageCircle className="w-[18px] h-[18px]" />
                 AGENDAR PELO WHATSAPP
@@ -80,7 +80,7 @@ const HeroSection = () => {
               <Button
                 variant="heroOutline"
                 size="lg"
-                className="gap-2.5 px-10 h-14 w-full sm:w-auto"
+                className="gap-2.5 px-8 sm:px-10 h-[52px] w-full sm:w-auto text-[13px] sm:text-[14px]"
               >
                 NOSSOS SERVIÇOS
                 <ChevronRight className="w-4 h-4" />
@@ -104,7 +104,7 @@ const HeroSection = () => {
                 <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gold font-serif">
                   {stat.num}
                 </p>
-                <p className="text-[9px] sm:text-[10px] text-white/50 mt-1.5 uppercase tracking-[0.18em] font-medium font-sans">
+                <p className="text-[10px] sm:text-[11px] text-white/50 mt-1.5 uppercase tracking-[0.15em] font-medium font-sans">
                   {stat.label}
                 </p>
               </div>
