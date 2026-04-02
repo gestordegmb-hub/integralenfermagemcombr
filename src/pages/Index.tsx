@@ -1,13 +1,12 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import CredentialsBar from "@/components/CredentialsBar";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
-import ProfessionalSection from "@/components/ProfessionalSection";
+import DifferentialsSection from "@/components/DifferentialsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import BeforeAfterSection from "@/components/BeforeAfterSection";
-import FAQSection from "@/components/FAQSection";
+import CTASection from "@/components/CTASection";
 import SchedulingSection from "@/components/SchedulingSection";
-import LocationSection from "@/components/LocationSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -18,13 +17,12 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
+        <CredentialsBar />
         <SpecialtiesSection />
-        <ProfessionalSection />
+        <DifferentialsSection />
         <TestimonialsSection />
-        <BeforeAfterSection />
+        <CTASection />
         <SchedulingSection />
-        <FAQSection />
-        <LocationSection />
       </main>
       <Footer />
       <WhatsAppButton />
