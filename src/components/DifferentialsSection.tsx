@@ -17,23 +17,23 @@ const stats = [
 
 const DifferentialsSection = () => {
   return (
-    <section id="diferenciais" className="py-24 sm:py-32 bg-secondary text-white">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="diferenciais" className="py-16 sm:py-24 lg:py-32 bg-secondary text-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-xl mx-auto mb-16 sm:mb-20"
+          className="text-center max-w-xl mx-auto mb-14 sm:mb-20"
         >
-          <span className="text-[11px] uppercase tracking-[0.25em] text-gold font-medium font-sans">Diferenciais</span>
-          <h2 className="text-3xl sm:text-4xl md:text-[2.75rem] lg:text-5xl font-semibold mt-4 mb-5 text-white leading-[1.15] font-serif italic">
+          <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.2em] text-gold font-medium font-sans">Diferenciais</span>
+          <h2 className="text-[28px] sm:text-4xl md:text-[2.75rem] lg:text-5xl font-semibold mt-4 mb-5 text-white leading-[1.15] font-serif italic">
             O Que Nos Torna Diferentes
           </h2>
           <div className="w-12 h-px mx-auto mt-5 bg-gold" />
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-6 mb-20">
+        <div className="grid sm:grid-cols-2 gap-6 sm:gap-7 mb-16 sm:mb-20">
           {differentials.map((d, i) => (
             <motion.div
               key={d.num}
@@ -41,16 +41,16 @@ const DifferentialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="bg-white/5 border border-white/10 rounded-lg p-7 sm:p-8 hover:border-gold/30 transition-all duration-500 group"
+              className="bg-white/5 border border-white/10 rounded-md p-7 sm:p-8 hover:border-gold/30 transition-all duration-500 group"
             >
               <div className="flex items-start gap-5">
-                <span className="text-3xl font-serif text-gold/40 font-semibold leading-none">{d.num}</span>
+                <span className="text-4xl sm:text-5xl font-serif text-gold/30 font-semibold leading-none">{d.num}</span>
                 <div>
-                  <div className="flex items-center gap-2.5 mb-3">
+                  <div className="flex items-center gap-3 mb-3">
                     <d.icon className="w-5 h-5 text-gold" />
-                    <h3 className="font-semibold text-lg text-white font-serif">{d.title}</h3>
+                    <h3 className="font-semibold text-lg sm:text-xl text-white font-serif">{d.title}</h3>
                   </div>
-                  <p className="text-[13px] text-white/60 leading-relaxed font-sans">{d.desc}</p>
+                  <p className="text-[14px] text-white/60 leading-[1.65] font-sans">{d.desc}</p>
                 </div>
               </div>
             </motion.div>
@@ -68,8 +68,8 @@ const DifferentialsSection = () => {
               transition={{ delay: i * 0.1, duration: 0.5 }}
               className="text-center"
             >
-              <p className="text-4xl sm:text-5xl font-semibold text-gold font-serif">{s.num}</p>
-              <p className="text-[10px] sm:text-[11px] text-white/50 mt-2 uppercase tracking-[0.15em] font-sans font-medium">{s.label}</p>
+              <p className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-gold font-serif">{s.num}</p>
+              <p className="text-[11px] sm:text-[12px] text-white/50 mt-3 uppercase tracking-[0.12em] font-sans font-medium">{s.label}</p>
             </motion.div>
           ))}
         </div>
