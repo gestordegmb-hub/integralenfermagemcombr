@@ -49,7 +49,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.7 }}
-            className="text-[15px] sm:text-base lg:text-lg text-white/75 mb-10 sm:mb-12 leading-relaxed max-w-lg font-light font-sans"
+            className="text-[15px] sm:text-base lg:text-lg text-white/95 mb-10 sm:mb-12 leading-relaxed max-w-lg font-light font-sans"
           >
             Referência em enfermagem avançada na Região dos Lagos. Cuidados especializados,
             tecnologia e acompanhamento personalizado com a mais alta qualidade técnica e humana.
