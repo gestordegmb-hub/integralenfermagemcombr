@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import CredentialsBar from "@/components/CredentialsBar";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
+import BeforeAfterSection from "@/components/BeforeAfterSection";
 import DifferentialsSection from "@/components/DifferentialsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
