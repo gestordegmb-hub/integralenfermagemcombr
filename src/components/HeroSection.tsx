@@ -14,14 +14,14 @@ const HeroSection = () => {
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
-        {/* Gradient overlay — dark navy left, transparent right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(225,55%,8%)] via-[hsl(225,55%,8%)/0.7] to-transparent" />
+        {/* Gradient overlay — transparent left (professional visible), dark on right (text area) */}
+        <div className="absolute inset-0 bg-gradient-to-l from-[hsl(225,55%,8%)] via-[hsl(225,55%,8%)/0.75] to-transparent" />
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-20 sm:pb-28 lg:pb-32 pt-32 sm:pt-40">
-        <div className="max-w-xl lg:max-w-2xl">
+        <div className="max-w-xl lg:max-w-2xl ml-auto">
           {/* Label */}
           <motion.p
             initial={{ opacity: 0, y: 8 }}
