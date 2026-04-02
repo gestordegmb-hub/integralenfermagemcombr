@@ -15,7 +15,7 @@ const HeroSection = () => {
           loading="eager"
         />
         {/* Gradient overlay — transparent left (professional visible), dark on right (text area) */}
-        <div className="absolute inset-0 bg-gradient-to-l from-[rgba(34,47,68,0.25)] via-[rgba(34,47,68,0.15)] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-l from-[rgba(10,20,35,0.85)] via-[rgba(15,25,45,0.55)] to-[rgba(15,25,45,0.2)]" />
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
