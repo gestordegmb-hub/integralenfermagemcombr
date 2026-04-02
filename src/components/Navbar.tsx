@@ -32,7 +32,7 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <a href="#inicio" className="flex items-center gap-3">
+          <a href="#inicio" className="flex items-center gap-3 ml-16 sm:ml-24 lg:ml-32">
             <img
               src={logoImg}
               alt="Clínica Integral"
