@@ -10,12 +10,19 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImg}
-          alt="Clínica Integral - Ambiente moderno e acolhedor"
-          className="w-full h-full object-cover object-center"
+          alt="Clínica Integral - Enfermeira profissional em ambiente clínico moderno"
+          className="w-full h-full object-cover object-[center_20%] sm:object-center"
           loading="eager"
+          width={1920}
+          height={1080}
         />
-        {/* Gradient overlay — darker on text side (right), clear on left */}
-        <div className="absolute inset-0 bg-gradient-to-l from-[rgba(10,20,35,0.88)] via-[rgba(15,25,45,0.55)] to-[rgba(15,25,45,0.15)]" />
+        {/* Gradient overlay — lighter on left (professional), darker on right (text) */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(90deg, rgba(10,20,35,0.08) 0%, rgba(10,20,35,0.25) 35%, rgba(10,20,35,0.65) 60%, rgba(10,20,35,0.82) 100%)`,
+          }}
+        />
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
