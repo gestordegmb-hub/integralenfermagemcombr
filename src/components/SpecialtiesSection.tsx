@@ -6,6 +6,10 @@ import feridasImg from "@/assets/specialties/feridas.png";
 import estomiasImg from "@/assets/specialties/estomias.png";
 import laserterapiaImg from "@/assets/specialties/laserterapia.png";
 import podiatriaImg from "@/assets/specialties/podiatria.png";
+import ozonioterapiaImg from "@/assets/specialties/ozonioterapia.png";
+import ledterapiaImg from "@/assets/specialties/ledterapia.png";
+import prfImg from "@/assets/specialties/prf.png";
+import homecareImg from "@/assets/specialties/homecare.png";
 
 const services = [
   {
@@ -15,22 +19,46 @@ const services = [
     img: feridasImg,
   },
   {
-    title: "Estomias & Cuidados Especializados",
+    title: "Cuidados da Pessoa com Estomias",
     desc: "Assistência integral para pessoas com estomias, incluindo orientação, adaptação e acompanhamento contínuo.",
     tags: ["Estomias intestinais", "Estomias urinárias", "Adaptação"],
     img: estomiasImg,
   },
   {
-    title: "Laserterapia & Ozonioterapia",
-    desc: "Tecnologias avançadas para aceleração da cicatrização, regeneração tecidual e redução de dor.",
-    tags: ["Laser", "Ozônio", "LEDterapia"],
+    title: "Avaliação do Pé em Pessoas com Diabetes",
+    desc: "Avaliação especializada dos pés, prevenção de complicações diabéticas e acompanhamento contínuo.",
+    tags: ["Prevenção", "Avaliação", "Acompanhamento"],
+    img: podiatriaImg,
+  },
+  {
+    title: "Laserterapia",
+    desc: "Terapia com laser de baixa intensidade para aceleração da cicatrização e regeneração tecidual.",
+    tags: ["Cicatrização", "Regeneração", "Redução de dor"],
     img: laserterapiaImg,
   },
   {
-    title: "Podiatria & Pé Diabético",
-    desc: "Cuidados especializados com pés, prevenção de complicações diabéticas e tratamento de unhas.",
-    tags: ["Prevenção", "Tratamento", "Acompanhamento"],
-    img: podiatriaImg,
+    title: "Ozonioterapia",
+    desc: "Aplicação terapêutica do ozônio para tratamento de feridas, infecções e processos inflamatórios.",
+    tags: ["Anti-inflamatório", "Antimicrobiano", "Cicatrização"],
+    img: ozonioterapiaImg,
+  },
+  {
+    title: "LEDterapia",
+    desc: "Fototerapia com LED para estimulação celular, redução de inflamação e aceleração do reparo tecidual.",
+    tags: ["Fototerapia", "Reparo tecidual", "Anti-inflamatório"],
+    img: ledterapiaImg,
+  },
+  {
+    title: "Terapia Regenerativa com PRF",
+    desc: "Fibrina rica em plaquetas para regeneração tecidual avançada e aceleração do processo de cicatrização.",
+    tags: ["Fibrina", "Plaquetas", "Regeneração"],
+    img: prfImg,
+  },
+  {
+    title: "Atendimento Domiciliar e em Consultório",
+    desc: "Assistência de enfermagem especializada no conforto do seu lar ou em nosso consultório equipado.",
+    tags: ["Home care", "Consultório", "Flexibilidade"],
+    img: homecareImg,
   },
 ];
 
