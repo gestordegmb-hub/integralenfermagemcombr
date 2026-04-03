@@ -44,7 +44,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="text-[clamp(36px,8vw,64px)] font-semibold leading-[1.1] mb-6 sm:mb-8 text-white font-serif italic [text-shadow:_0_2px_8px_rgba(0,0,0,0.4)]"
+            className="text-[clamp(36px,8vw,64px)] font-bold leading-[1.1] mb-6 sm:mb-8 text-white font-serif italic [text-shadow:_0_2px_10px_rgba(0,0,0,0.6),_0_4px_20px_rgba(0,0,0,0.3)]"
           >
             Cuidado Especializado
             <br />
