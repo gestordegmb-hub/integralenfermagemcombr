@@ -90,10 +90,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-[13px] text-white/30 text-center sm:text-left font-sans">
+          <p className="text-[13px] text-white/60 text-center sm:text-left font-sans">
             © 2026 Clínica Integral — Enfermagem Especializada. Todos os direitos reservados.
           </p>
-          <p className="text-[13px] text-white/20 font-sans">
+          <p className="text-[13px] text-white/50 font-sans">
             COREN-RJ · Enfermagem com Excelência
           </p>
         </div>
