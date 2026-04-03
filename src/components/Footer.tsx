@@ -68,7 +68,7 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="text-[11px] sm:text-[12px] uppercase tracking-[0.12em] text-gold/80 mb-6 font-medium font-sans">Contato</h4>
-            <ul className="space-y-4 text-[14px] text-white/50 font-sans">
+            <ul className="space-y-4 text-[14px] text-white/80 font-sans">
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gold/60 flex-shrink-0" />
                 <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">(22) 97401-7588</a>
