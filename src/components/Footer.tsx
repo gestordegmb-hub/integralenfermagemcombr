@@ -19,7 +19,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="w-8 h-px bg-gold/50 mb-5" />
-            <p className="text-[14px] text-white/50 leading-[1.65] font-sans">
+            <p className="text-[14px] text-white/80 leading-[1.65] font-sans">
               Cuidado humanizado com a qualidade que você merece.
               Mais de 15 anos de experiência em enfermagem especializada.
             </p>
