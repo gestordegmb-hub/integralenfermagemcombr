@@ -4,7 +4,7 @@ import { MessageCircle, Phone, CheckCircle } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="relative py-16 sm:py-24 lg:py-32 bg-primary overflow-hidden">
+    <section className="relative py-16 sm:py-24 lg:py-32 overflow-hidden" style={{ backgroundColor: '#055F57' }}>
       {/* Subtle pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
