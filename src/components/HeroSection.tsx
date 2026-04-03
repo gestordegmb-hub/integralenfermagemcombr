@@ -16,11 +16,11 @@ const HeroSection = () => {
           width={1920}
           height={1080}
         />
-        {/* Gradient overlay — lighter on left (professional), darker on right (text) */}
+        {/* Dark overlay to hide embedded text in image and ensure legibility */}
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(90deg, rgba(10,20,35,0.08) 0%, rgba(10,20,35,0.25) 35%, rgba(10,20,35,0.65) 60%, rgba(10,20,35,0.82) 100%)`,
+            background: `linear-gradient(90deg, rgba(5,20,35,0.55) 0%, rgba(5,20,35,0.45) 30%, rgba(5,20,35,0.70) 55%, rgba(5,20,35,0.88) 100%)`,
           }}
         />
         {/* Bottom fade */}
@@ -44,7 +44,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="text-[clamp(36px,8vw,64px)] font-semibold leading-[1.1] mb-6 sm:mb-8 text-white font-serif italic [text-shadow:_0_2px_8px_rgba(0,0,0,0.4)]"
+            className="text-[clamp(36px,8vw,64px)] font-bold leading-[1.1] mb-6 sm:mb-8 text-white font-serif italic [text-shadow:_0_2px_10px_rgba(0,0,0,0.6),_0_4px_20px_rgba(0,0,0,0.3)]"
           >
             Cuidado Especializado
             <br />
@@ -56,7 +56,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.7 }}
-            className="text-[15px] sm:text-[16px] lg:text-[18px] text-white/95 mb-10 sm:mb-12 leading-[1.65] max-w-lg font-light font-sans"
+            className="text-[15px] sm:text-[16px] lg:text-[18px] text-white mb-10 sm:mb-12 leading-[1.65] max-w-lg font-light font-sans [text-shadow:_0_1px_4px_rgba(0,0,0,0.4)]"
           >
             Referência em enfermagem avançada na Região dos Lagos. Cuidados especializados,
             tecnologia e acompanhamento personalizado com a mais alta qualidade técnica e humana.
