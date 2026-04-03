@@ -56,7 +56,7 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="text-[11px] sm:text-[12px] uppercase tracking-[0.12em] text-gold/80 mb-6 font-medium font-sans">Serviços</h4>
-            <ul className="space-y-3.5 text-[14px] text-white/50 font-sans">
+            <ul className="space-y-3.5 text-[14px] text-white/80 font-sans">
               <li>Tratamento de Feridas</li>
               <li>Estomias</li>
               <li>Laserterapia</li>
