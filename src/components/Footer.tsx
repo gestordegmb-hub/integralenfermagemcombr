@@ -30,7 +30,7 @@ const Footer = () => {
                 { href: "https://linktr.ee/integralcabofrio", icon: ExternalLink },
               ].map((s, i) => (
                 <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-md bg-white/5 flex items-center justify-center hover:bg-gold/20 hover:text-gold transition-all duration-300" aria-label="Social">
-                  <s.icon className="w-4 h-4 text-white/50 hover:text-gold" />
+                  <s.icon className="w-4 h-4 text-white/80 hover:text-gold" />
                 </a>
               ))}
             </div>
