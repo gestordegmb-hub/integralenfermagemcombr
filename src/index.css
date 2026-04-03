@@ -92,8 +92,8 @@
   }
 
   .section-title {
-    @apply text-[28px] sm:text-4xl md:text-[2.75rem] lg:text-5xl font-semibold mt-4 mb-5 text-foreground;
-    line-height: 1.15;
+    @apply text-[32px] sm:text-[40px] md:text-[3rem] lg:text-[3.5rem] font-bold mt-4 mb-5 text-foreground;
+    line-height: 1.12;
     font-style: italic;
   }
 
