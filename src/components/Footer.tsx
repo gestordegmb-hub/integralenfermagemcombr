@@ -19,7 +19,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="w-8 h-px bg-gold/50 mb-5" />
-            <p className="text-[14px] text-white/50 leading-[1.65] font-sans">
+            <p className="text-[14px] text-white/80 leading-[1.65] font-sans">
               Cuidado humanizado com a qualidade que você merece.
               Mais de 15 anos de experiência em enfermagem especializada.
             </p>
@@ -30,7 +30,7 @@ const Footer = () => {
                 { href: "https://linktr.ee/integralcabofrio", icon: ExternalLink },
               ].map((s, i) => (
                 <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-md bg-white/5 flex items-center justify-center hover:bg-gold/20 hover:text-gold transition-all duration-300" aria-label="Social">
-                  <s.icon className="w-4 h-4 text-white/50 hover:text-gold" />
+                  <s.icon className="w-4 h-4 text-white/80 hover:text-gold" />
                 </a>
               ))}
             </div>
@@ -39,7 +39,7 @@ const Footer = () => {
           {/* Navigation */}
           <div>
             <h4 className="text-[11px] sm:text-[12px] uppercase tracking-[0.12em] text-gold/80 mb-6 font-medium font-sans">Navegação</h4>
-            <ul className="space-y-3.5 text-[14px] text-white/50 font-sans">
+            <ul className="space-y-3.5 text-[14px] text-white/80 font-sans">
               {[
                 { label: "Início", href: "#inicio" },
                 { label: "Sobre a Clínica", href: "#sobre" },
@@ -56,7 +56,7 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="text-[11px] sm:text-[12px] uppercase tracking-[0.12em] text-gold/80 mb-6 font-medium font-sans">Serviços</h4>
-            <ul className="space-y-3.5 text-[14px] text-white/50 font-sans">
+            <ul className="space-y-3.5 text-[14px] text-white/80 font-sans">
               <li>Tratamento de Feridas</li>
               <li>Estomias</li>
               <li>Laserterapia</li>
@@ -68,7 +68,7 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="text-[11px] sm:text-[12px] uppercase tracking-[0.12em] text-gold/80 mb-6 font-medium font-sans">Contato</h4>
-            <ul className="space-y-4 text-[14px] text-white/50 font-sans">
+            <ul className="space-y-4 text-[14px] text-white/80 font-sans">
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gold/60 flex-shrink-0" />
                 <a href="https://wa.me/5522974017588" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">(22) 97401-7588</a>
@@ -90,10 +90,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-[13px] text-white/30 text-center sm:text-left font-sans">
+          <p className="text-[13px] text-white/60 text-center sm:text-left font-sans">
             © 2026 Clínica Integral — Enfermagem Especializada. Todos os direitos reservados.
           </p>
-          <p className="text-[13px] text-white/20 font-sans">
+          <p className="text-[13px] text-white/50 font-sans">
             COREN-RJ · Enfermagem com Excelência
           </p>
         </div>
