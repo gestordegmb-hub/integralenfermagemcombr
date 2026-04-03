@@ -16,11 +16,11 @@ const HeroSection = () => {
           width={1920}
           height={1080}
         />
-        {/* Gradient overlay — lighter on left (professional), darker on right (text) */}
+        {/* Dark overlay to hide embedded text in image and ensure legibility */}
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(90deg, rgba(10,20,35,0.08) 0%, rgba(10,20,35,0.25) 35%, rgba(10,20,35,0.65) 60%, rgba(10,20,35,0.82) 100%)`,
+            background: `linear-gradient(90deg, rgba(5,20,35,0.55) 0%, rgba(5,20,35,0.45) 30%, rgba(5,20,35,0.70) 55%, rgba(5,20,35,0.88) 100%)`,
           }}
         />
         {/* Bottom fade */}
