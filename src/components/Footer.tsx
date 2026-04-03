@@ -39,7 +39,7 @@ const Footer = () => {
           {/* Navigation */}
           <div>
             <h4 className="text-[11px] sm:text-[12px] uppercase tracking-[0.12em] text-gold/80 mb-6 font-medium font-sans">Navegação</h4>
-            <ul className="space-y-3.5 text-[14px] text-white/50 font-sans">
+            <ul className="space-y-3.5 text-[14px] text-white/80 font-sans">
               {[
                 { label: "Início", href: "#inicio" },
                 { label: "Sobre a Clínica", href: "#sobre" },
