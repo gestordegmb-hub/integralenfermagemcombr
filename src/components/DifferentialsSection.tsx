@@ -44,7 +44,7 @@ const DifferentialsSection = () => {
               className="bg-white/5 border border-white/10 rounded-md p-7 sm:p-8 hover:border-gold/30 transition-all duration-500 group"
             >
               <div className="flex items-start gap-5">
-                <span className="text-4xl sm:text-5xl font-serif <span className="text-4xl sm:text-5xl font-serif text-gold/60 font-semibold leading-none">{d.num}</span> leading-none">{d.num}</span>
+                <span className="text-4xl sm:text-5xl font-serif text-gold/60 font-semibold leading-none">{d.num}</span>
                 <div>
                   <div className="flex items-center gap-3 mb-3">
                     <d.icon className="w-5 h-5 text-gold" />
